@@ -17,7 +17,9 @@
 
 ### Components used:
     1. Rasberry pi Zero W
-    <img src="./images/rasppizeer.jpeg" alt="Rasberry py zero W">
+<p align="center">
+        <img src="https://github.com/Sanketwable/ELEC_20_NERO/blob/master/images/rasppizeer.jpeg" width="350" title="Raspberry pi">
+</p>
     2. Arduino Uno
     3. Py Cam
     4. Servo (SG-90) 
