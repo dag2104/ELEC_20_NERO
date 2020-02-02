@@ -1,0 +1,31 @@
+import socket
+from gpiozero import Servo
+from time import sleep
+
+
+
+# creates socket object
+s = socket.socket(socket.AF_INET,
+                  socket.SOCK_STREAM)
+
+host = '192.168.43.104'  
+port = 9999
+
+s.connect((host, port))
+tm = s.recv(1024) # msg can only be 1024 bytes long
+
+if tm.decode('utf-8') == 'servo on':
+  servo = Servo(17)
+  while True:
+    servo.min()
+    sleep(2)
+    servo.mid()
+    sleep(2)
+    servo.max()
+    sleep(2)
+
+
+    
+s.close()
+print("the message we got from the server is %s" % tm.decode('utf-8'))
+
